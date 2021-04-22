@@ -15,7 +15,7 @@ export default class Writestory extends React.Component {
     }
 
     SubmitStory=async()=>{
-      db.collection("Stories").doc(this.state.title).set({
+      db.collection("Stories").doc(this.state.title).add({
         'title':this.state.title,
         'author':this.state.author,
         'story':this.state.story,
